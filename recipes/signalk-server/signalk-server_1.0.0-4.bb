@@ -1,10 +1,8 @@
 # Recipe created by recipetool
 # This is the basis of a recipe and may need further editing in order to be fully functional.
 # (Feel free to remove these comments when editing.)
-#BB_STRICT_CHECKSUM = "0"
 
 SUMMARY = "An implementation of a [Signal K](http://signalk.org) server for boats."
-
 # WARNING: the following LICENSE and LIC_FILES_CHKSUM values are best guesses - it is
 # your responsibility to verify that the values are complete and correct.
 #
@@ -224,8 +222,8 @@ SUMMARY = "An implementation of a [Signal K](http://signalk.org) server for boat
 # licenses then you should change the value to separate the licenses with |
 # instead of &. If there is any doubt, check the accompanying documentation
 # to determine which situation is applicable.
-LICENSE = "PD & BSD-3-Clause & MIT & (BSD-3-Clause | MIT) & apache20 & \
-BSD-2-Clause & Unlicense & WTFPL & Apache-2.0 & ISC & Unknown"
+LICENSE = "ISC & MIT & Apache-2.0 & apache20 & Unlicense & PD & WTFPL \
+& Unknown & BSD-2-Clause & BSD-3-Clause & (BSD-3-Clause | MIT)"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=34f8c1142fd6208a8be89399cb521df9 \
                     file://node_modules/cors/LICENSE;md5=43b5353b7cba327feed269fae6433cc9 \
                     file://node_modules/cors/node_modules/object-assign/license;md5=a12ebca0510a773644101a99a867d210 \
@@ -2044,24 +2042,15 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=34f8c1142fd6208a8be89399cb521df9 \
                     file://public/bootstrap/LICENSE;md5=7feb871dfe601a665c5c5201d3fa8450 \
                     file://public/jquery/LICENSE.txt;md5=dbcc2c190962327ad79a758ce6bea6f8"
 
-# Add runtime dependency to bash for all recipe's packages
-#RDEPENDS_${PN} = "bash openssl"
-#RDEPENDS_${PN}-js-quantities = "bash"
-#RDEPENDS_${PN}-leaflet = "bash"
-#RDEPENDS_${PN}-superagent = "bash"
-#RDEPENDS_${PN}-pem = "bash"
-
 SRC_URI = "npm://registry.npmjs.org;name=signalk-server;version=${PV}"
 
-#NPM_SHRINKWRAP := "${THISDIR}/${PN}/npm-shrinkwrap.json"
-#NPM_LOCKDOWN := "${THISDIR}/${PN}/lockdown.json"
+NPM_SHRINKWRAP := "${THISDIR}/${PN}/npm-shrinkwrap.json"
+NPM_LOCKDOWN := "${THISDIR}/${PN}/lockdown.json"
 
 inherit npm
 
 # Must be set after inherit npm since that itself sets S
 S = "${WORKDIR}/npmpkg"
-
-
 LICENSE_${PN}-baconjs = "MIT"
 LICENSE_${PN}-body-parser-bytes = "MIT"
 LICENSE_${PN}-body-parser-content-type = "MIT"
@@ -3374,7 +3363,7 @@ LICENSE_${PN}-signalk-client-ws = "MIT"
 LICENSE_${PN}-signalk-maptracker-d3 = "BSD-3-Clause"
 LICENSE_${PN}-signalk-maptracker-jquery = "MIT"
 LICENSE_${PN}-signalk-maptracker-js-quantities = "MIT"
-LICENSE_${PN}-signalk-maptracker-leaflet = "BSD-2-Clause Unknown"
+LICENSE_${PN}-signalk-maptracker-leaflet = "Unknown BSD-2-Clause"
 LICENSE_${PN}-signalk-maptracker-signalk-client-bluebird = "MIT"
 LICENSE_${PN}-signalk-maptracker-signalk-client-debug-ms = "MIT"
 LICENSE_${PN}-signalk-maptracker-signalk-client-debug = "MIT"
@@ -3902,6 +3891,6 @@ LICENSE_${PN}-ws = "MIT"
 LICENSE_${PN}-xml2js-sax = "ISC"
 LICENSE_${PN}-xml2js-xmlbuilder = "MIT"
 LICENSE_${PN}-xml2js = "MIT"
-LICENSE_${PN} = "MIT BSD-2-Clause Unknown"
+LICENSE_${PN} = "BSD-2-Clause MIT Unknown"
 
 
