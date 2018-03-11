@@ -1,0 +1,9 @@
+[Unit]
+Description=SignalK Server Socket
+PartOf=signalk.service
+
+[Socket]
+ListenStream=3000
+
+[Install]
+WantedBy=sockets.target

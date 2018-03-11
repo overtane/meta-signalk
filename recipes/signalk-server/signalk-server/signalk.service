@@ -1,0 +1,16 @@
+[Unit]
+Description=SignalK Server
+After=network.target signalk.socket
+Requires=signalk.socket
+AssertPathExists=/home/root/.signalk
+
+[Service]
+ExecStart=/home/root/.signalk/signalk-server
+Restart=on-failure
+WorkingDirectory=/home/root/.signalk
+User=root
+Environment=EXTERNALPORT=3000
+
+[Install]
+WantedBy=multi-user.target
+

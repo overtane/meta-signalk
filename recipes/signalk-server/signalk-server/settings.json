@@ -1,0 +1,11 @@
+{
+  "interfaces": {},
+
+  "ssl": false,
+
+  "pipedProviders": [],
+
+  "security": {
+    "strategy": "@signalk/sk-simple-token-security"
+  }
+}
