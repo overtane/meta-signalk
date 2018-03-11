@@ -1,0 +1,59 @@
+diff --git bitbake/lib/bb/fetch2/npm.py bitbake/lib/bb/fetch2/npm.py
+index b5f148c..ded3399 100644
+--- bitbake/lib/bb/fetch2/npm.py
++++ bitbake/lib/bb/fetch2/npm.py
+@@ -24,6 +24,7 @@ import urllib.request, urllib.parse, urllib.error
+ import json
+ import subprocess
+ import signal
++import re
+ import bb
+ from   bb.fetch2 import FetchMethod
+ from   bb.fetch2 import FetchError
+@@ -161,7 +162,8 @@ class Npm(FetchMethod):
+             elif '{' in line:
+                 datalines = []
+                 datalines.append(line)
+-            bracelevel = bracelevel + line.count('{') - line.count('}')
++            if not re.match('^\s*\".*\"\s*:\s*\".*\"', line): # skip string defs
++                bracelevel = bracelevel + line.count('{') - line.count('}')
+         if datalines:
+             pdata = json.loads('\n'.join(datalines))
+         return pdata
+diff --git meta/classes/npm.bbclass meta/classes/npm.bbclass
+index a69bedb..ca7244b 100644
+--- meta/classes/npm.bbclass
++++ meta/classes/npm.bbclass
+@@ -31,7 +31,8 @@ npm_do_compile() {
+ 	fi
+ 	npm set cache ${WORKDIR}/npm_cache
+ 	# clear cache before every build
+-	npm cache clear
++	#npm cache clear
++	npm cache verify
+ 	# Install pkg into ${S} without going to the registry
+ 	if [  "${NPM_INSTALL_DEV}" = "1" ]; then
+ 		npm --arch=${NPM_ARCH} --target_arch=${NPM_ARCH} --no-registry install
+@@ -45,7 +46,8 @@ npm_do_install() {
+ 	# be created in this directory
+ 	export HOME=${WORKDIR}
+ 	mkdir -p ${NPM_INSTALLDIR}/
+-	npm install --prefix ${D}${prefix} -g --arch=${NPM_ARCH} --target_arch=${NPM_ARCH} --production --no-registry
++        tgz=$(npm pack ${S})
++	npm install --prefix ${D}${prefix} -g --arch=${NPM_ARCH} --target_arch=${NPM_ARCH} --production --no-registry ${tgz}
+ 	if [ -d ${D}${prefix}/etc ] ; then
+ 		# This will be empty
+ 		rmdir ${D}${prefix}/etc
+diff --git scripts/lib/recipetool/create_npm.py scripts/lib/recipetool/create_npm.py
+index ae53972..407c746 100644
+--- scripts/lib/recipetool/create_npm.py
++++ scripts/lib/recipetool/create_npm.py
+@@ -64,6 +64,8 @@ class NpmRecipeHandler(RecipeHandler):
+         license = None
+         if 'license' in data:
+             license = data['license']
++            if isinstance(license, list):
++                license = license[0]
+             if isinstance(license, dict):
+                 license = license.get('type', None)
+             if license:
