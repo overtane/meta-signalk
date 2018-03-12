@@ -42,6 +42,7 @@ DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
 VIRTUAL-RUNTIME_initscripts = ""
 
 IMAGE_INSTALL_append = " nodejs nodejs-npm nodejs-systemtap"
+IMAGE_INSTALL_append = " avahi-daemon avahi-dnsconfd avahi-utils"
 IMAGE_INSTALL_append = " signalk-server"
 IMAGE_FEATURES_remove = " splash"
 CORE_IMAGE_EXTRA_INSTALL = "systemd-analyze systemd-bootchart"

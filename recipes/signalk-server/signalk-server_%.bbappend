@@ -8,8 +8,11 @@
 NPM_SHRINKWRAP = ""
 NPM_LOCKDOWN = ""
 
-# Add runtime dependency to bash for all recipe's packages
-RDEPENDS_${PN} = "nodejs bash openssl"
+# Add buildtime dependencies
+DEPENDS = "nodejs avahi avahi-native"
+
+# Add runtime dependencies
+RDEPENDS_${PN} = "nodejs bash openssl libdns-sd"
 RDEPENDS_${PN}-js-quantities = "bash"
 RDEPENDS_${PN}-leaflet = "bash"
 RDEPENDS_${PN}-superagent = "bash"
@@ -47,4 +50,3 @@ do_install_append() {
 
 FILES_${PN} += "${SIGNALK_CONFIGDIR}/*"
 FILES_${PN} += "${systemd_system_unitdir}/*"
-

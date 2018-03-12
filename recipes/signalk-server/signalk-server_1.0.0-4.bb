@@ -233,7 +233,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=34f8c1142fd6208a8be89399cb521df9 \
                     file://node_modules/xml2js/LICENSE;md5=d9fc599c8d9e6f8665063862aac66dfc \
                     file://node_modules/xml2js/node_modules/xmlbuilder/LICENSE;md5=eb65a7137aed46eac98ceb8cb8b057a1 \
                     file://node_modules/xml2js/node_modules/sax/LICENSE;md5=326d5674181c4bb210e424772c60fa80 \
-                    file://node_modules/colors/LICENSE;md5=441ee46669f9365ff2492e9b555c8ee7 \
+                    file://node_modules/colors/LICENSE;md5=4d6f4592bba26cc192f1adfa242a08c7 \
                     file://node_modules/geolib/LICENSE;md5=6170b2002ab00402c434c3dd29e6275c \
                     file://node_modules/@signalk/freeboard-sk/LICENSE;md5=826d41118b35cd3c5a2bdab64d95f13d \
                     file://node_modules/@signalk/simplegauges/LICENSE.txt;md5=56b47d379805ed45bc0c1aff19d7364b \
@@ -1433,7 +1433,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=34f8c1142fd6208a8be89399cb521df9 \
                     file://node_modules/express/node_modules/body-parser/node_modules/http-errors/node_modules/statuses/LICENSE;md5=36e2bc837ce69a98cc33a9e140d457e5 \
                     file://node_modules/express/node_modules/body-parser/node_modules/http-errors/node_modules/setprototypeof/LICENSE;md5=4846f1626304c2c0f806a539bbc7d54a \
                     file://node_modules/express/node_modules/body-parser/node_modules/qs/LICENSE;md5=d5c7c6dc45a33a0a9620ed81315672d7 \
-                    file://node_modules/express/node_modules/statuses/LICENSE;md5=607209623abfcc77b9098f71a0ef52f9 \
+                    file://node_modules/express/node_modules/statuses/LICENSE;md5=36e2bc837ce69a98cc33a9e140d457e5 \
                     file://node_modules/express/node_modules/escape-html/LICENSE;md5=f8746101546eeb9e4f6de64bb8bdf595 \
                     file://node_modules/express/node_modules/fresh/LICENSE;md5=373c2cf0978b37e434394a43b4cbbdb4 \
                     file://node_modules/express/node_modules/utils-merge/LICENSE;md5=1cf0906082187f374cb9a63c54eb782c \
@@ -1446,7 +1446,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=34f8c1142fd6208a8be89399cb521df9 \
                     file://node_modules/express/node_modules/send/node_modules/on-finished/LICENSE;md5=1b1f7f9cec194121fdf616b971df7a7b \
                     file://node_modules/express/node_modules/send/node_modules/on-finished/node_modules/ee-first/LICENSE;md5=c8d3a30332ecb31cfaf4c0a06da18f5c \
                     file://node_modules/express/node_modules/send/node_modules/depd/LICENSE;md5=13babc4f212ce635d68da544339c962b \
-                    file://node_modules/express/node_modules/send/node_modules/statuses/LICENSE;md5=607209623abfcc77b9098f71a0ef52f9 \
+                    file://node_modules/express/node_modules/send/node_modules/statuses/LICENSE;md5=36e2bc837ce69a98cc33a9e140d457e5 \
                     file://node_modules/express/node_modules/send/node_modules/escape-html/LICENSE;md5=f8746101546eeb9e4f6de64bb8bdf595 \
                     file://node_modules/express/node_modules/send/node_modules/fresh/LICENSE;md5=373c2cf0978b37e434394a43b4cbbdb4 \
                     file://node_modules/express/node_modules/send/node_modules/mime/LICENSE;md5=8e8ea2ad138ce468f8570a0edbadea65 \
@@ -1467,7 +1467,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=34f8c1142fd6208a8be89399cb521df9 \
                     file://node_modules/express/node_modules/finalhandler/node_modules/debug/node_modules/ms/license.md;md5=fd56fd5f1860961dfa92d313167c37a6 \
                     file://node_modules/express/node_modules/finalhandler/node_modules/on-finished/LICENSE;md5=1b1f7f9cec194121fdf616b971df7a7b \
                     file://node_modules/express/node_modules/finalhandler/node_modules/on-finished/node_modules/ee-first/LICENSE;md5=c8d3a30332ecb31cfaf4c0a06da18f5c \
-                    file://node_modules/express/node_modules/finalhandler/node_modules/statuses/LICENSE;md5=607209623abfcc77b9098f71a0ef52f9 \
+                    file://node_modules/express/node_modules/finalhandler/node_modules/statuses/LICENSE;md5=36e2bc837ce69a98cc33a9e140d457e5 \
                     file://node_modules/express/node_modules/finalhandler/node_modules/escape-html/LICENSE;md5=f8746101546eeb9e4f6de64bb8bdf595 \
                     file://node_modules/express/node_modules/finalhandler/node_modules/unpipe/LICENSE;md5=934ab86a8ab081ea0326add08d550739 \
                     file://node_modules/express/node_modules/finalhandler/node_modules/encodeurl/LICENSE;md5=272621efa0ff4f18a73221e49ab60654 \
@@ -1495,7 +1495,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=34f8c1142fd6208a8be89399cb521df9 \
                     file://node_modules/express/node_modules/serve-static/node_modules/send/node_modules/on-finished/LICENSE;md5=1b1f7f9cec194121fdf616b971df7a7b \
                     file://node_modules/express/node_modules/serve-static/node_modules/send/node_modules/on-finished/node_modules/ee-first/LICENSE;md5=c8d3a30332ecb31cfaf4c0a06da18f5c \
                     file://node_modules/express/node_modules/serve-static/node_modules/send/node_modules/depd/LICENSE;md5=13babc4f212ce635d68da544339c962b \
-                    file://node_modules/express/node_modules/serve-static/node_modules/send/node_modules/statuses/LICENSE;md5=607209623abfcc77b9098f71a0ef52f9 \
+                    file://node_modules/express/node_modules/serve-static/node_modules/send/node_modules/statuses/LICENSE;md5=36e2bc837ce69a98cc33a9e140d457e5 \
                     file://node_modules/express/node_modules/serve-static/node_modules/send/node_modules/escape-html/LICENSE;md5=f8746101546eeb9e4f6de64bb8bdf595 \
                     file://node_modules/express/node_modules/serve-static/node_modules/send/node_modules/fresh/LICENSE;md5=373c2cf0978b37e434394a43b4cbbdb4 \
                     file://node_modules/express/node_modules/serve-static/node_modules/send/node_modules/mime/LICENSE;md5=8e8ea2ad138ce468f8570a0edbadea65 \
